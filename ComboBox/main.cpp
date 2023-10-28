@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include<Windows.h>
 #include"resource.h"
 #include<cstdio>
@@ -15,9 +15,9 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, IN
 
 BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-	// hwnd - Handler to Window (Обратобтчик окна);
-	// uMsg - unsignedMessage	Сообщение;
-	// wParam, lParam - параметры сообщения;
+	// hwnd - Handler to Window (РћР±СЂР°С‚РѕР±С‚С‡РёРє РѕРєРЅР°);
+	// uMsg - unsignedMessage	РЎРѕРѕР±С‰РµРЅРёРµ;
+	// wParam, lParam - РїР°СЂР°РјРµС‚СЂС‹ СЃРѕРѕР±С‰РµРЅРёСЏ;
 	switch (uMsg)
 	{
 	case WM_INITDIALOG:
@@ -38,7 +38,7 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			int i = SendMessage(hCombo, CB_GETCURSEL, 0, 0);
 			SendMessage(hCombo, CB_GETLBTEXT,i,(LPARAM)sz_buffer);
 			CHAR sz_message[SIZE]{};
-			sprintf(sz_message, " Вы выбрали элемент № %i, со значением \"%s\"",i, sz_buffer);
+			sprintf(sz_message, " Р’С‹ РІС‹Р±СЂР°Р»Рё СЌР»РµРјРµРЅС‚ в„– %i, СЃРѕ Р·РЅР°С‡РµРЅРёРµРј \"%s\"",i, sz_buffer);
 			// %i - integer
 			// %s - string
 			MessageBox(hwnd, sz_message, "Info", MB_OK | MB_ICONINFORMATION);
